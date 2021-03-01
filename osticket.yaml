@@ -37,7 +37,30 @@ spec:
         - name: MYSQL_HOST
           value: osticket-mysql
         - name: MYSQL_PASSWORD
-          value: secret        
+          value: secret
+        - name: SMTP_FROM
+          value: osticket@tbz-osticket.ch
+        - name: SMTP_HOST
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: SMTP_HOST
+        - name: SMTP_PORT
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: SMTP_PORT
+                - name: SMTP_HOST
+        - name: SMTP_USER
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: SMTP_USER
+        - name: SMTP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: SMTP_PASSWORD               
         ports:
         - containerPort: 80
           name: osticket
