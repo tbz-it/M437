@@ -43,23 +43,22 @@ spec:
         - name: SMTP_HOST
           valueFrom:
             secretKeyRef:
-              name: osticket-secret
+              name: osticket-secrets
               key: SMTP_HOST
         - name: SMTP_PORT
           valueFrom:
             secretKeyRef:
-              name: osticket-secret
+              name: osticket-secrets
               key: SMTP_PORT
-                - name: SMTP_HOST
         - name: SMTP_USER
           valueFrom:
             secretKeyRef:
-              name: osticket-secret
+              name: osticket-secrets
               key: SMTP_USER
         - name: SMTP_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: osticket-secret
+              name: osticket-secrets
               key: SMTP_PASSWORD               
         ports:
         - containerPort: 80
