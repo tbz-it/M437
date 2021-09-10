@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: osticket-mysql
   labels:
-    app: osticket
+    app: osticket-mysql
 spec:
   ports:
     - port: 3306
   selector:
-    app: osticket
+    app: osticket-mysql
     tier: mysql
   clusterIP: None
 ---
@@ -17,18 +17,18 @@ kind: Deployment
 metadata:
   name: osticket-mysql
   labels:
-    app: osticket
+    app: osticket-mysql
 spec:
   selector:
     matchLabels:
-      app: osticket
+      app: osticket-mysql
       tier: mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: osticket
+        app: osticket-mysql
         tier: mysql
     spec:
       containers:
