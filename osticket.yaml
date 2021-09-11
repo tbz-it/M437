@@ -13,6 +13,7 @@ spec:
     protocol: TCP
   selector:
     app: osticket
+    tier: frontend
 ---
 apiVersion: apps/v1
 kind: Deployment
