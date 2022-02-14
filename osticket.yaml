@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: osticket
-        image: campbellsoftwaresolutions/osticket
+        image: https://quay.io/repository/elg73782/campbellsoftwaresolutions.osticket
         env:
         - name: MYSQL_HOST
           value: osticket-mysql
