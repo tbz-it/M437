@@ -6,4 +6,5 @@ module "lerncloud" {
   module     = "m437"
   userdata   = "cloud-init.yaml"
   mem        = "4GB"
+  cpu        = 2
 }
