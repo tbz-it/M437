@@ -11,3 +11,9 @@ output "fqdn_vm" {
   value = module.lerncloud.fqdn_vm
   description = "The FQDN of the server instance."
 }
+
+# Einfuehrungsseiten
+
+output "README" {
+  value = templatefile( "README.md", { ip = module.lerncloud.ip_vm, fqdn = module.lerncloud.fqdn_vm, ADDR = module.lerncloud.ip_vm } )
+} 
