@@ -11,6 +11,11 @@ output "fqdn_vm" {
   value = module.lerncloud.fqdn_vm
   description = "The FQDN of the server instance."
 }
+  
+output "description" {
+  value       = module.lerncloud.description
+  description = "Description VM"
+}  
 
 # Einfuehrungsseiten
 
