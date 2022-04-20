@@ -1,10 +1,13 @@
 module "lerncloud" {
-  source     = "git::https://github.com/mc-b/terraform_lerncloud_multipass"      
-  #source     = "git::https://github.com/mc-b/terraform_lerncloud_aws"
-  #source     = "git::https://github.com/mc-b/terraform_lerncloud_azure"
-  #source     = "git::https://github.com/mc-b/terraform_lerncloud_maas"
-  module     = "m437"
-  userdata   = "cloud-init.yaml"
-  mem        = "4GB"
-  cpu        = 2
+  #source     = "git::https://github.com/mc-b/terraform-lerncloud-maas"
+  source     = "git::https://github.com/mc-b/terraform-lerncloud-multipass"
+  #source     = "git::https://github.com/mc-b/terraform-lerncloud-aws"
+  #source     = "git::https://github.com/mc-b/terraform-lerncloud-azure"
+  
+  module      = "m437"
+  description = "M437 Im Support arbeiten"
+  userdata    = "cloud-init.yaml"
+    
+  memory      = 4
+  cores       = 2
 }
