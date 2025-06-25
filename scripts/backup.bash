@@ -4,7 +4,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 PREFIX=`dirname $0`/mysql.dump
 
 
-i=900
+i=24
 while [ $i -ge 0 ] ; do 
 	if [ -f $PREFIX.$i.gz ] ; then 
 		mv $PREFIX.$i.gz $PREFIX.$(($i+1)).gz
